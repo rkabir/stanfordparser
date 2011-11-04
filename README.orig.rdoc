@@ -71,7 +71,7 @@ The standoff preprocessor returns StanfordParser::StandoffToken objects, which c
 	>> "This is a sentence.  So is this."[27..31]
 	=> "this."
 
-This is the same information contained in the <tt>edu.stanford.nlp.ling.FeatureLabel</tt> class in the Stanford Parser Java implementation.  
+This is the same information contained in the <tt>edu.stanford.nlp.ling.FeatureLabel</tt> class in the Stanford Parser Java implementation.
 
 Similarly, use the StanfordParser::StandoffParsedText object to parse a block of text into StanfordParser::StandoffNode parse trees whose terminal nodes are StanfordParser::StandoffToken objects.
 

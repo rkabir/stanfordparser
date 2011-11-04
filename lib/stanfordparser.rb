@@ -227,11 +227,11 @@ module StanfordParser
       s = Rjb::JavaObjectWrapper.new("java.io.StringReader", s)
       _invoke(:getSentencesFromText, "Ljava.io.Reader;", s.java_object)
     end
-    
+
     def inspect
       "<#{self.class.to_s.split('::').last}>"
     end
-    
+
     def to_s
       inspect
     end

@@ -24,7 +24,7 @@ module Rjb
   # The documentation for this class appears next to its extension inside the
   # StanfordParser module in stanfordparser.rb.  This should be changed if Rjb
   # is ever moved into its own gem.  See the documention in stanfordparser.rb
-  # for more details.  
+  # for more details.
   #++
   class JavaObjectWrapper
     include Enumerable
