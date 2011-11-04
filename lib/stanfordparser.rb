@@ -48,7 +48,7 @@ module StanfordParser
       root = Pathname.new("C:\\stanford-parser\\current ")
       config = Pathname.new("C:\\stanford-parser\\ruby-stanford-parser.yaml")
     else
-      root = Pathname.new("/usr/local/stanford-parser/current")
+      root = Pathname.new("/usr/local/stanford-parser/current/grammar")
       config = Pathname.new("/etc/ruby-stanford-parser.yaml")
     end
     jvmargs = ["-server", "-Xmx150m"]
@@ -130,7 +130,7 @@ module StanfordParser
     # <tt>edu.stanford.nlp.parser.lexparser.Options.setOptions</tt> for more
     # details.
     def initialize(grammar = ENGLISH_PCFG_MODEL, options = [])
-      @grammar = Pathname.new(grammar.gsub(/\$\(ROOT\)/, ROOT))
+      @grammar = Pathname.new(grammar.gsub(/\$\(ROOT\)/, ROOT.to_s))
       super("edu.stanford.nlp.parser.lexparser.LexicalizedParser", @grammar.to_s)
       @java_object.setOptionFlags(options)
     end
