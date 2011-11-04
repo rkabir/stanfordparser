@@ -48,7 +48,7 @@ module StanfordParser
       root = Pathname.new("C:\\stanford-parser\\current ")
       config = Pathname.new("C:\\stanford-parser\\ruby-stanford-parser.yaml")
     else
-      root = Pathname.new("/usr/local/stanford-parser/current/grammar")
+      root = Pathname.new("/usr/local/stanford-parser/current")
       config = Pathname.new("/etc/ruby-stanford-parser.yaml")
     end
     jvmargs = ["-server", "-Xmx150m"]
